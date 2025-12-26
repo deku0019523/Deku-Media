@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deku-Media 2.0 - Téléchargement Vidéos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="dm-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">Deku</span><span class="logo-sub">-Media 2.0</span>
+      </div>
+      <nav class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#how-it-works">Comment ça marche</a>
+        <a href="#platforms">Plateformes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#legal">Mentions légales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil / Outil principal -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Téléchargez vos vidéos en 1 clic</h1>
+          <p>Deku-Media 2.0 vous permet de télécharger des vidéos depuis plusieurs plateformes avec un simple lien, sans inscription.</p>
+          <form id="download-form" class="download-form">
+            <label for="video-url">Collez le lien de la vidéo</label>
+            <div class="input-group">
+              <input type="url" id="video-url" placeholder="https://youtu.be/..." required />
+              <button type="submit" id="analyze-btn">Analyser</button>
+            </div>
+            <p class="input-hint">YouTube, TikTok, Instagram, Facebook, Pinterest, X (Twitter)...</p>
+          </form>
+
+          <div id="error-box" class="alert alert-error hidden"></div>
+          <div id="info-box" class="alert alert-info hidden"></div>
+        </div>
+
+        <div class="hero-card" id="result-card" aria-live="polite">
+          <div id="placeholder">
+            <p>Les formats disponibles s’afficheront ici après l’analyse.</p>
+          </div>
+          <div id="video-meta" class="hidden">
+            <img id="thumb" alt="Miniature vidéo" />
+            <h2 id="title"></h2>
+            <p id="platform-label"></p>
+          </div>
+          <div id="formats" class="formats-list hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2>Comment ça marche ?</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Collez le lien</h3>
+            <p>Copiez l’URL de la vidéo depuis YouTube, TikTok, Instagram, Facebook, etc.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Analyse automatique</h3>
+            <p>La plateforme est détectée et les formats disponibles sont listés (144p à 4K, audio seul si disponible).</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Téléchargez</h3>
+            <p>Choisissez la qualité et cliquez sur « Télécharger ». Pas de compte, pas de limite cachée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plateformes supportées -->
+    <section id="platforms" class="section section-alt">
+      <div class="container">
+        <h2>Plateformes prises en charge</h2>
+        <div class="platform-grid">
+          <div class="platform-item yt">YouTube</div>
+          <div class="platform-item tiktok">TikTok</div>
+          <div class="platform-item insta">Instagram</div>
+          <div class="platform-item fb">Facebook</div>
+          <div class="platform-item pin">Pinterest</div>
+          <div class="platform-item tw">X / Twitter</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Le service est-il gratuit ?</summary>
+            <p>Oui, Deku-Media 2.0 permet le téléchargement sans inscription et sans frais cachés.</p>
+          </details>
+          <details>
+            <summary>Puis-je télécharger en 4K ?</summary>
+            <p>Si la vidéo source propose la 4K, elle sera listée dans les formats disponibles.</p>
+          </details>
+          <details>
+            <summary>Est-ce légal de télécharger des vidéos ?</summary>
+            <p>Le téléchargement de contenus protégés par le droit d’auteur sans autorisation peut violer les conditions d’utilisation et la loi. Utilisez cet outil uniquement pour des contenus dont vous avez les droits. [web:20][web:23][web:32]</p>
+          </details>
+          <details>
+            <summary>Mes données sont-elles enregistrées ?</summary>
+            <p>Aucune inscription n’est requise. Les liens ne sont pas stockés au-delà du traitement technique.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentions légales & Politique -->
+    <section id="legal" class="section section-alt">
+      <div class="container">
+        <h2>Mentions légales & Politique de confidentialité</h2>
+        <p>Deku-Media 2.0 est un outil technique. L’utilisateur est seul responsable de l’usage des fichiers téléchargés. Le site respecte les bonnes pratiques de sécurité et de confidentialité des données. [web:26]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dm-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Deku-Media 2.0 — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
